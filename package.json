@@ -1,0 +1,9 @@
+{
+	"name": "base-package",
+	"version": "0.1.0",
+	"description": "This is my base project to use when creating new packages.",
+	"private": true,
+	"browser": "./main.js",
+	"author": "Mark Hanna",
+	"license": "Hippocratic-2.1"
+}
