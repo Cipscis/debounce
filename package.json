@@ -1,9 +1,9 @@
 {
-	"name": "base-package",
-	"version": "0.1.0",
-	"description": "This is my base project to use when creating new packages.",
+	"name": "debounce",
+	"version": "1.0.0",
+	"description": "Debounce functions so they won't be executed until a delay has passed since the last call.",
 	"private": true,
-	"browser": "./main.js",
+	"browser": "./debounce.js",
 	"author": "Mark Hanna",
 	"license": "Hippocratic-2.1"
 }
