@@ -1,0 +1,40 @@
+.content p,
+.p {
+	margin: 20px 0;
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.content code,
+.code {
+	display: inline-block;
+	vertical-align: bottom;
+	line-height: 1.5;
+
+	background: $grey--lightest;
+	color: $grey--dark;
+
+	padding: 0 7px;
+	border-radius: 5px;
+	font-family: monospace;
+	white-space: pre;
+	tab-size: 4;
+	-moz-tab-size: 4;
+
+	max-width: 100%;
+	overflow: auto;
+}
+
+.content kbd,
+.kbd {
+	display: inline-block;
+	padding: 0 5px;
+	border-radius: 5px;
+	border: 1px solid $grey--light;
+	box-shadow: 0 2px 5px rgba($black, 0.4);
+	font-family: monospace;
+}
