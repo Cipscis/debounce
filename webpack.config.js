@@ -14,10 +14,11 @@ let config = {
 
 switch (process.env.MODE) {
 	case 'development':
-		break;
 		config.optimization = {
 			minimize: false,
 		};
+		config.devtool = 'eval-source-map';
+		break;
 	case 'production':
 	default:
 		config.devtool = 'source-map';

@@ -1,6 +1,6 @@
 {
 	"name": "debounce",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Debounce functions so they won't be executed until a delay has passed since the last call.",
 	"private": true,
 	"browser": "./debounce.js",
