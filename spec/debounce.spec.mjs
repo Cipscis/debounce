@@ -60,6 +60,28 @@ describe('debounce', () => {
 		expect(spy.calls.count()).toBe(1);
 	});
 
+	it(`restarts the delay if the debounced function is called again during it`, () => {
+		const debouncedFn = debounce(spy, 100);
+
+		debouncedFn();
+
+		jasmine.clock().tick(50);
+
+		debouncedFn();
+
+		jasmine.clock().tick(50);
+
+		expect(spy.calls.count()).toBe(0);
+
+		jasmine.clock().tick(49);
+
+		expect(spy.calls.count()).toBe(0);
+
+		jasmine.clock().tick(1);
+
+		expect(spy.calls.count()).toBe(1);
+	});
+
 	it(`can execute the function again after it has been called`, () => {
 		const debouncedFn = debounce(spy, 100);
 
