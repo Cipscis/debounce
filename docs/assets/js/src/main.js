@@ -1,5 +1,4 @@
-import debounce from '/debounce';
-import activate from 'activate';
+import debounce from '/debounce.js';
 
 const increment = function (e) {
 	e.preventDefault();
@@ -12,5 +11,5 @@ const increment = function (e) {
 	el.setAttribute('data-activate-count', activateNum);
 };
 
-activate('.js-debounce-fast', debounce(increment, 200));
-activate('.js-debounce-slow', debounce(increment, 1000));
+document.querySelectorAll('.js-debounce-fast').forEach(($el) => $el.addEventListener('click', debounce(increment, 200)));
+document.querySelectorAll('.js-debounce-slow').forEach(($el) => $el.addEventListener('click', debounce(increment, 1000)));

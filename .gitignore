@@ -1,3 +1,5 @@
 node_modules/
 .env
 *.sublime-workspace
+docs/assets/css/
+docs/assets/js/dist/
