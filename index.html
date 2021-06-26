@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debounce</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="/debounce/assets/css/main.css" />
+	<script type="module" src="/debounce/assets/js/dist/bundle.js"></script>
+</head>
+<body>
+	<main class="layout">
+		<section>
+			<div class="content">
+				<h1>Debounce</h1>
+
+				<p><a href="changelog">Changelog</a></p>
+
+				<p>Debounces a function so it won't be executed until after a given delay has passed since the most recent time it was called.</p>
+			</div>
+		</section>
+
+
+		<section>
+			<div class="content">
+				<h2>Debounce</h2>
+
+				<code>debounce(fn, delay)</code>
+
+				<p>Creates a new version of the function <code>fn</code>, which will only be executed once <code>delay</code> milliseconds has passed since the most recent time it was called.</p>
+
+				<h3>Arguments</h3>
+
+				<h4>fn</h4>
+
+				<p>A function to be debounced.</p>
+
+				<h4>delay</h4>
+
+				<p>The number of milliseconds that must pass since the most recent time the function is called before it will be executed.</p>
+
+				<h3>Examples</h3>
+
+				<p>This button will only be activated after 200 ms has passed since its last activation:</p>
+
+				<button class="button activate-button js-debounce-fast" data-activate-count="0">200 ms delay</button>
+
+				<p>This button will only be activated after a second has passed since its last activation:</p>
+
+				<button class="button activate-button js-debounce-slow" data-activate-count="0">1000 ms delay</button>
+			</div>
+		</section>
+	</main>
+</body>
+
+</html>

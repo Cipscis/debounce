@@ -1,0 +1,23 @@
+@import "base/mixins.scss";
+
+@import "base/theme.scss";
+@import "base/reset.scss";
+@import "base/typography.scss";
+
+@import "components/content.scss";
+@import "components/button.scss";
+
+@import "components/activate.scss";
+
+html {
+	font-family: Arial, sans-serif;
+}
+
+.layout {
+	max-width: 800px;
+	margin: 60px auto;
+}
+
+body.dark {
+	background: $grey--dark;
+}

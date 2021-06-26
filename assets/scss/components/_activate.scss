@@ -1,0 +1,10 @@
+// Examples in the Activate documentation
+
+.activate-button {
+	&::after {
+		content: attr(data-activate-count);
+
+		display: inline-block;
+		margin-left: 5px;
+	}
+}

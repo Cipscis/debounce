@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Debounce 1.0.2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="/debounce/assets/css/main.css" />
+</head>
+<body>
+	<main class="layout">
+		<div class="content">
+			<h1>Debounce 1.0.2 - Adjusted build system</h1>
+
+			<p><a href="../">Back to changelog</a></p>
+
+			<p>This patch fixed an error in the build system, and reconfigured the type of sourcemaps generated during development mode.</p>
+
+			<section id="breaking">
+				<h2>Breaking changes</h2>
+				<ul>
+					<li>None</li>
+				</ul>
+			</section>
+
+			<section id="non-breaking">
+				<h2>Non-breaking changes</h2>
+
+				<ul>
+					<li>Fixed incorrect break statement in Webpack config, and set development mode Webpack <a href="https://webpack.js.org/configuration/devtool/" target="_blank">devtool</a> to <code>'eval-source-map'</code>.</li>
+				</ul>
+			</section>
+		</div>
+	</main>
+</body>
+
+</html>
