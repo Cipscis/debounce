@@ -8,6 +8,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 * Added unit tests using [Jasmine](https://jasmine.github.io/).
 * Added named `debounce` export.
+* Added GitHub workflow to deploy to GitHub Pages automatically.
 
 ### Changed
 
