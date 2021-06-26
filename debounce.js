@@ -12,14 +12,15 @@ const debounce = function (fn, delay) {
 
 	return function () {
 		if (timeout) {
-			window.clearTimeout(timeout);
+			clearTimeout(timeout);
 		}
 
-		timeout = window.setTimeout(() => {
+		timeout = setTimeout(() => {
 			timeout = undefined;
 			fn.apply(this, arguments);
 		}, delay);
 	};
 };
 
+export { debounce };
 export default debounce;

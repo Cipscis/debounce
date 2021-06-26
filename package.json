@@ -1,18 +1,25 @@
 {
 	"name": "debounce",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "Debounce functions so they won't be executed until a delay has passed since the last call.",
 	"private": true,
-	"browser": "./debounce.js",
+	"main": "./debounce.js",
+	"type": "module",
 	"files": [
 		"debounce.js"
 	],
 	"scripts": {
 		"server": "node server/server.js",
+		"build": "gulp build",
 		"watch": "gulp",
-		"start": "concurrently --kill-others \"npm run server\" \"npm run watch\""
+		"start": "concurrently --kill-others \"npm run server\" \"npm run watch\"",
+		"test": "jasmine"
 	},
 	"author": "Mark Hanna",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/cipscis/debounce.git"
+	},
 	"license": "Hippocratic-2.1",
 	"devDependencies": {
 		"concurrently": "^6.1.0",
@@ -20,7 +27,8 @@
 		"express": "^4.17.1",
 		"gulp": "^4.0.2",
 		"gulp-sass": "^4.1.0",
-		"webpack-stream": "^6.1.2",
-		"activate": "github:cipscis/activate#semver:1.0.2"
+		"jasmine": "^3.7.0",
+		"sass": "^1.34.1",
+		"webpack": "^5.40.0"
 	}
 }

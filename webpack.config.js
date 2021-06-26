@@ -1,13 +1,15 @@
-const dotenv = require('dotenv');
+import dotenv from 'dotenv';
 dotenv.config();
 
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = fileURLToPath(import.meta.url);
 
 let config = {
 	mode: process.env.MODE,
 	entry: './docs/assets/js/src/main.js',
 	output: {
-		path: path.resolve(__dirname, 'docs/assets/js/dist'),
+		path: path.resolve(__dirname, '../docs/assets/js/dist'),
 		filename: 'bundle.js',
 	},
 };
@@ -25,4 +27,4 @@ switch (process.env.MODE) {
 		break;
 }
 
-module.exports = config;
+export default config;
