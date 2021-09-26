@@ -1,4 +1,4 @@
-import { debounce } from '../debounce.js';
+import { debounce } from '../dist/debounce.js';
 
 describe('debounce', () => {
 	let spy;
@@ -165,7 +165,7 @@ describe('debounce', () => {
 	});
 
 	// Use function instead of array notation so 'arguments' exists
-	it(`doesn't override 'arguments' when used with arrow notation`, function ()  {
+	it(`doesn't override 'arguments' when used with arrow notation`, function () {
 		let withArgs;
 
 		const fn = function () {

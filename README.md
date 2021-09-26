@@ -4,7 +4,7 @@
 
 ## Install
 
-Run `npm install github:cipscis/debounce#semver:1.x`
+Run `npm install @cipscis/debounce`
 
 ## Usage
 
@@ -19,7 +19,7 @@ You will need to install [Node.js](https://nodejs.org/en/) before working on thi
 3. Create a [`.env`](#env) file.
 4. Run `npm start` to run the local server and watch CSS and JS files for changes.
 
-This project creates five npm tasks:
+This project creates six npm tasks:
 
 * `npm run server` runs a Node.js server on the port specified in the [`.env`](#env) file, using [Express](https://expressjs.com/).
 
@@ -29,7 +29,8 @@ This project creates five npm tasks:
 
 * `npm start` runs both the `server` and `watch` tasks simultaneously.
 
-* `npm test` task runs any configured test suites using [Jasmine](https://jasmine.github.io/).
+* `npm test` task compiles any TypeScript and runs any configured test suites using [Jasmine](https://jasmine.github.io/).
+* `npm run prepare` first removes directories containing compiled files, then compiles any TypeScript and runs any configured test suites using [Jasmine](https://jasmine.github.io/). You should never need to run this task manually, [the `prepare` script runs automatically](https://docs.npmjs.com/cli/v7/using-npm/scripts#life-cycle-scripts) when npm prepares your package for publishing.
 
 Usually, you will just want to run `npm start`.
 
@@ -75,13 +76,21 @@ These dependencies are used when working on the project locally.
 
 * [Gulp](https://gulpjs.com/): Task runner
 
+* [TypeScript](https://www.typescriptlang.org/): JavaScript extension for static type checking
+
 * [Jasmine](https://jasmine.github.io/): Testing framework
+
+* [@types/jasmine](https://www.npmjs.com/package/@types/jasmine): TypeScript types for Jasmine
 
 * [sass](https://www.npmjs.com/package/sass): Compiling CSS from [Sass](https://sass-lang.com/)
 
 * [gulp-sass](https://www.npmjs.com/package/gulp-sass): Using the `sass` compiler with Gulp
 
 * [Webpack](https://webpack.js.org/): For JavaScript dependency management, used with Gulp
+
+* [ts-loader](https://github.com/TypeStrong/ts-loader): For compiling TypeScript using Webpack
+
+* [resolve-typescript-plugin](https://github.com/softwareventures/resolve-typescript-plugin): For using ES Module syntax with Webpack's `ts-loader`
 
 * [Express](https://expressjs.com/): Running a Node.js server, accessed at `http://localhost:<PORT>`
 

@@ -4,6 +4,7 @@
 		"**/*[sS]pec.js",
 		"**/*[sS]pec.mjs"
 	],
+	"jsLoader": "import",
 	"helpers": [
 		"helpers/**/*.js"
 	],
