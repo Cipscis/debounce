@@ -4,6 +4,10 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ## [2.0.0] - 2021-09-27
 
+### Added
+
+* A debounced function now returns a Promise that resolves to the value returned by the initial function.
+
 ### Changed
 
 * Converted to TypeScript.

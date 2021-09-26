@@ -190,4 +190,55 @@ describe('debounce', () => {
 		jasmine.clock().tick(100);
 		expect(withArgs).not.toEqual([1, 2, 3, 4]);
 	});
+
+	it(`returns a promise that resolves to the value returned by the initial function`, function () {
+		const fn = function () {
+			return true;
+		};
+
+		const debouncedFn = debounce(fn, 100);
+
+		const promiseVal = debouncedFn();
+
+		expect(promiseVal).toBeInstanceOf(Promise);
+
+		promiseVal.then((val) => {
+			expect(val).toBe(true);
+		});
+
+		jasmine.clock().tick(100);
+
+		return promiseVal;
+	});
+
+	it(`resolves the same promise even if it was called multiple times`, function () {
+		const fn = function () {
+			return true;
+		};
+
+		const debouncedFn = debounce(fn, 100);
+
+		const promiseVal = debouncedFn();
+
+		promiseVal.then((val) => {
+			expect(val).toBe(true);
+		});
+
+		jasmine.clock().tick(50);
+
+		const promiseVal2 = debouncedFn();
+
+		expect(promiseVal2).toBe(promiseVal);
+
+		jasmine.clock().tick(100);
+
+		// After fn has been called, a new promise will be created when the debounced function is called
+		const promiseVal3 = debouncedFn();
+
+		expect(promiseVal3).not.toBe(promiseVal);
+
+		jasmine.clock().tick(100);
+
+		return promiseVal3;
+	});
 });
