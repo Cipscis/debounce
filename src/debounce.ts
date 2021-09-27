@@ -25,7 +25,7 @@ const debounce = function<T extends (...args: any) => any> (fn: T, delay: number
 	let promise: Promise<ReturnType<T>> | undefined;
 	let res: ((value: ReturnType<T> | PromiseLike<ReturnType<T>>) => void) | undefined;
 
-	return function (this: any, ...args: Parameters<T>) {
+	return function (this: ThisParameterType<T>, ...args: Parameters<T>) {
 		const scheduleResolution = (resolve: (value: ReturnType<T> | PromiseLike<ReturnType<T>>) => void) => {
 			if (timeout) {
 				clearTimeout(timeout);
