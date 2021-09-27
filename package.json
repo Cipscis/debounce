@@ -2,7 +2,6 @@
 	"name": "@cipscis/debounce",
 	"version": "2.0.0",
 	"description": "Debounce functions so they won't be executed until a delay has passed since the last call.",
-	"private": true,
 	"main": "./dist/debounce.js",
 	"type": "module",
 	"files": [
